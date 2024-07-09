@@ -1,0 +1,54 @@
+const mongoose=require("mongoose")
+
+const bookingSchema=new mongoose.Schema({
+  cart:{
+    type:Array,
+    required:true,
+  },
+  addressName:{
+    type:String,
+    required:true,
+  },
+  addressHouse:{
+    type:String,
+    required:true
+  },
+  addressStreet:{
+    type:String,
+    required:true
+  },
+  addressPlace:{
+    type:String,
+    required:true
+  },
+  addressPin:{
+    type:Number,
+    required:true
+  },
+  addressPhone:{
+    type:Number,
+    required:true
+  },
+  grandTotal:{
+    type:Number,
+    required:true
+  },
+  bookingTime:{
+    type:String,
+    required:true
+  },
+  userId:{
+    type:String,
+    required:true
+  },
+  bookedYear:{
+    type:Number,
+    required:true
+  },
+  bookedMonth:{
+    type:String,
+    required:true
+  }
+})
+const booking=mongoose.model("booking",bookingSchema)
+module.exports=booking
